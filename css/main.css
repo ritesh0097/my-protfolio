@@ -1928,7 +1928,7 @@ input::-moz-focus-inner {
   background-color: #02182c;
   background-repeat: no-repeat;
   background-position: top center;
-  background-image: url(../images/hritik.jpg);
+  background-image: url(../images/my-img.jpeg);
   background-size: cover;
   position: absolute;
   top: 20%;
@@ -2168,9 +2168,13 @@ input::-moz-focus-inner {
  *
  * ------------------------------------------------------------------- */
 .s-about {
-  padding-top: 4.2rem;
+  padding-top: 10.2rem;
   padding-bottom: 1.8rem;
   background-color: #ffffff;
+}
+
+#work-education {
+  padding-top: 10.2rem;
 }
 
 .s-about .row {
@@ -2510,7 +2514,7 @@ input::-moz-focus-inner {
  *
  * ------------------------------------------------------------------- */
 .s-services {
-  padding-top: 5.2rem;
+  padding-top: 10.2rem;
   padding-bottom: 1rem;
   background-repeat: no-repeat;
   background-position: center center;
@@ -2740,7 +2744,7 @@ input::-moz-focus-inner {
  *
  * ------------------------------------------------------------------- */
 .s-works {
-  padding-top: 5.2rem;
+  padding-top: 10.2rem;
   padding-bottom: 5rem;
   background-color: #ffffff;
 }
