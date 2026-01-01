@@ -534,7 +534,7 @@ form,
  * # preloader
  *
  * ------------------------------------------------------------------- */
-#preloader {
+/* #preloader {
   position: fixed;
   top: 0;
   left: 0;
@@ -562,6 +562,7 @@ form,
   margin-top: -30px;
 }
 
+
 #loader:before {
   content: "";
   border-top: 6px solid rgba(255, 255, 255, 0.1);
@@ -575,6 +576,7 @@ form,
   width: 60px;
   height: 60px;
 }
+
 
 @-webkit-keyframes load {
   0% {
@@ -600,6 +602,59 @@ form,
     transform: rotate(360deg);
   }
 
+} */
+
+
+/* my loader */
+
+#preloader {
+  background-color: rgb(0, 0, 0);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+
+.loader-box {
+    background-color: transparent;
+    width: 80px;
+    height: 80px;
+    border: 20px solid;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.l-box-1 {
+    animation: l-box-1 2s infinite;
+    border-color: rgba(172, 255, 47, 0.8);
+}
+.l-box-2 {
+    animation: l-box-2 2s infinite;
+    border-color: rgba(135, 207, 235, 0.8);
+}
+
+@keyframes l-box-1 {
+    0% {
+        transform: translate(0%, -100%);
+    }
+    50% {        
+        transform: translate(-100%, 0%);
+    }
+    100% {
+        transform: translate(0%, -100%);
+    }
+}
+@keyframes l-box-2 {
+    0% {
+        transform: translate(-100%, 0%);
+    }
+    50% {
+        transform: translate(0%, -100%);
+    }
+    100% {
+        transform: translate(-100%, 0%);
+    }
 }
 
 
@@ -1697,8 +1752,12 @@ input::-moz-focus-inner {
   margin: 0;
   position: absolute;
   top: 0;
-  right: 40px;
+  right: 40px;  
 }
+
+  .header-nav-wrap .header-social {
+    display: none;
+  }
 
 .header-social li {
   margin-right: 1rem;
@@ -1816,11 +1875,7 @@ input::-moz-focus-inner {
 
   .header-nav-wrap {
     margin-right: 36px;
-  }
-
-  .header-nav-wrap .header-social {
-    display: none;
-  }
+  }  
 
 }
 
@@ -2013,6 +2068,12 @@ input::-moz-focus-inner {
   background-color: #cf1767;
 }
 
+#intro-social-links {  
+  display: flex;
+  z-index: 2;
+  list-style: none;
+}
+
 /* ------------------------------------------------------------------- 
  * responsive:
  * intro
@@ -2093,6 +2154,11 @@ input::-moz-focus-inner {
     font-size: 5.6rem;
   }
 
+  #into-social-container {
+    position: relative;
+    left: 70%;
+  }
+
 }
 
 @media screen and (max-width:700px) {
@@ -2106,6 +2172,10 @@ input::-moz-focus-inner {
 
   .intro-grid {
     left: 15%;
+  }
+
+  #into-social-container {
+    left: 60%;
   }
 
 }
@@ -2150,6 +2220,10 @@ input::-moz-focus-inner {
 
   .intro-text h1 {
     font-size: 4.5rem;
+  }
+
+  #into-social-container {
+    left: 50%;
   }
 
 }
