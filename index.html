@@ -41,6 +41,7 @@
         <div class="loader-box l-box-2"></div>
     </div>
 
+    <div id="content">
     <!-- site header
     ================================================== -->
     <header class="s-header">
@@ -750,7 +751,8 @@
         </div>
 
     </div><!-- end photoSwipe background -->
-
+    
+    </div>
 
     <!-- Java Script
     ================================================== -->
@@ -759,9 +761,24 @@
 
         let preloader = document.getElementById('preloader');
 
-        function run_preloader() {
-            preloader.style.display = "none";
-        }
+        // disable this to run preloader
+
+        // function run_preloader() {
+        //     preloader.style.display = "none";
+        // }
+        
+
+        // check loader in web
+
+        let content = document.getElementById('content');
+        
+        preloader.style.display = 'block';
+        content.style.display = 'none';
+        
+        setTimeout(() => {        
+        preloader.style.display = 'none';
+        content.style.display = 'block';
+        }, 4000);
 
 
     </script>
@@ -771,3 +788,4 @@
     <script src="js/main.js"></script>
 
 </body>
+</html>
